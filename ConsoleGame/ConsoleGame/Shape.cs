@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Schema;
+
 
 namespace ConsoleGame
 {
@@ -59,7 +55,7 @@ namespace ConsoleGame
 
                     char pixel;
 
-                    if (f < 0)
+                    if (f < size)
                     {
                         if (f < size / 8)
                             pixel = texture[3];
@@ -75,9 +71,5 @@ namespace ConsoleGame
                 }
              return buffer;
         }
-        
-
-
-
     }
 }

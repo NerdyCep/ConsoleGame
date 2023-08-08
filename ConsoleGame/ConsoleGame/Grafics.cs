@@ -19,12 +19,13 @@ namespace ConsoleGame
             this.height = height;
             this.multiplier = multiplier;   
             aspect = (float)width / height;
+            pixelAspect = 8.0f / 12.0f;
             buffer = new char[width * height];
         }
 
         private void Reset()
         {
-            for (int i = 0; i < width; i++)
+            for (int i=0; i < width; i++)
                 for (int j = 0; j < height; j++)
                     buffer[i + j * width] = ' ';
         }
@@ -36,7 +37,7 @@ namespace ConsoleGame
         public void Draw(Shape shape)
         {
             char[] shapeBuffer = shape.Draw(this);
-            for (int i = 0; i < width; i++)
+            for (int i = 0; i < width; i++) 
                 for(int j = 0; j < height; j++)
                 {
                     if (shapeBuffer[i + j * width] != 0)
